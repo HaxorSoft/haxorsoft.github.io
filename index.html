@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaxorSoft | Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray background */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">HaxorSoft</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-sky-400 transition-colors duration-300">About</a>
+            <a href="#projects" class="block py-2 hover:text-sky-400 transition-colors duration-300">Projects</a>
+            <a href="#contact" class="block py-2 hover:text-sky-400 transition-colors duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 scroll-animation">
+                    Welcome to <span class="gradient-text">HaxorSoft</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 scroll-animation" style="transition-delay: 150ms;">
+                    We build beautiful and functional things for the web.
+                </p>
+                <a href="#projects" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 inline-block scroll-animation" style="transition-delay: 300ms;">
+                    View My Work
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center scroll-animation" style="transition-delay: 450ms;">
+                <!-- You can replace this placeholder with a photo of yourself -->
+                <img src="https://placehold.co/400x400/1e293b/94a3b8?text=HaxorSoft" alt="HaxorSoft Logo" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-gray-700 shadow-lg">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 scroll-animation">
+            <h3 class="text-3xl font-bold text-center mb-12 gradient-text">About Us</h3>
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-2/3 text-lg text-gray-300 leading-relaxed">
+                    <p class="mb-4">
+                        Welcome! We are a passionate team of developers with a love for creating intuitive and dynamic user experiences. Our journey into web development started years ago, and since then, we've been honing our skills in front-end and back-end technologies.
+                    </p>
+                    <p class="mb-6">
+                        We specialize in creating modern software solutions with clean code and beautiful design. When we're not coding, you can find us exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">HTML</span>
+                        <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">CSS & Tailwind</span>
+                        <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">JavaScript</span>
+                        <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">React</span>
+                        <span class="bg-gray-700 text-sky-300 text-sm font-medium px-4 py-2 rounded-full">Node.js</span>
+                    </div>
+                </div>
+                <div class="md:w-1/3 flex justify-center">
+                    <img src="https://placehold.co/300x300/1e293b/94a3b8?text=Another+Photo" alt="Illustration" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h3 class="text-3xl font-bold text-center mb-12 gradient-text">My Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="glass-effect rounded-lg overflow-hidden p-6 transform hover:-translate-y-2 transition-transform duration-300 scroll-animation">
+                    <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Project+One" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold text-white mb-2">Project One</h4>
+                    <p class="text-gray-400 mb-4">A brief description of the project, its purpose, and the technologies used.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-sky-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-sky-400 hover:underline">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="glass-effect rounded-lg overflow-hidden p-6 transform hover:-translate-y-2 transition-transform duration-300 scroll-animation" style="transition-delay: 150ms;">
+                    <img src="https://placehold.co/600x400/1e293b/818cf8?text=Project+Two" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold text-white mb-2">Project Two</h4>
+                    <p class="text-gray-400 mb-4">A brief description of the project, its purpose, and the technologies used.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-sky-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-sky-400 hover:underline">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="glass-effect rounded-lg overflow-hidden p-6 transform hover:-translate-y-2 transition-transform duration-300 scroll-animation" style="transition-delay: 300ms;">
+                    <img src="https://placehold.co/600x400/1e293b/a78bfa?text=Project+Three" alt="Project 3" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h4 class="text-xl font-bold text-white mb-2">Project Three</h4>
+                    <p class="text-gray-400 mb-4">A brief description of the project, its purpose, and the technologies used.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-sky-400 hover:underline">Live Demo</a>
+                        <a href="#" class="text-sky-400 hover:underline">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 scroll-animation">
+            <h3 class="text-3xl font-bold text-center mb-4 gradient-text">Get In Touch</h3>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
+            </p>
+            <div class="text-center">
+                <a href="mailto:your.email@example.com" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 inline-block">
+                    Say Hello
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-500">
+            <p>&copy; 2025 HaxorSoft. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Animations
+        const scrollElements = document.querySelectorAll('.scroll-animation');
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+        const displayScrollElement = (element) => {
+            element.classList.add('visible');
+        };
+        const hideScrollElement = (element) => {
+            element.classList.remove('visible');
+        };
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                } else {
+                    // Optional: hide element again when it's out of view
+                    // hideScrollElement(el); 
+                }
+            });
+        };
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+        // Trigger on load
+        handleScrollAnimation();
+    </script>
+</body>
+</html>
